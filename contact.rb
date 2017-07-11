@@ -67,7 +67,7 @@ class Contact
       @last_name    = value
     elsif email     == 'email'
       @email        = value
-    elsif note      == note
+    elsif note      == 'note'
       @note         = value
     end
   end
@@ -99,30 +99,29 @@ class Contact
   # HINT: Check the Array class docs for built-in methods that might be useful here
   def delete(value)
     contact_to_delete = Contact.find_by(value)
-    puts ".... #{contact_to_delete}"
     @@contacts.delete(contact_to_delete)
   end
 
   # Feel free to add other methods here, if you need them.
 end
 
-betty = Contact.create('Betty', 'Boop', 'bb@gmail.com')
-john = Contact.create('John', 'doe', 'bvvvgmail.com')
-# p Contact.find(1)
-# p Contact.find_by('Betty')
+# betty = Contact.create('Betty', 'Boop', 'bb@gmail.com')
+# john = Contact.create('John', 'doe', 'bvvvgmail.com')
+# # p Contact.find(1)
+# # p Contact.find_by('Betty')
 
 
 
-betty.update('first_name', 'john')
-betty.update('last_name', 'doe')
+# betty.update('first_name', 'john')
+# betty.update('last_name', 'doe')
 
 
-p Contact.find_by('doe')
+# p Contact.find_by('doe')
 
 
-betty.delete('john')
+# betty.delete('john')
 
-p Contact.find_by('john')
+# p Contact.find_by('john')
 
 
 # p Contact.delete_all
